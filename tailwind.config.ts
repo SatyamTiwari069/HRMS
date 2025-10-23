@@ -76,10 +76,17 @@ export default {
           border: "var(--sidebar-accent-border)"
         },
         status: {
-          online: "rgb(34 197 94)",
-          away: "rgb(245 158 11)",
-          busy: "rgb(239 68 68)",
-          offline: "rgb(156 163 175)",
+          present: "hsl(142 76% 36%)",
+          absent: "hsl(0 84% 60%)",
+          late: "hsl(43 96% 56%)",
+          onLeave: "hsl(217 91% 60%)",
+          pending: "hsl(43 96% 56%)",
+          approved: "hsl(142 76% 36%)",
+          rejected: "hsl(0 84% 60%)",
+          success: "hsl(142 76% 36%)",
+          warning: "hsl(43 96% 56%)",
+          error: "hsl(0 84% 60%)",
+          info: "hsl(217 91% 60%)",
         },
       },
       fontFamily: {

@@ -15,7 +15,7 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 37905
+localPort = 34225
 externalPort = 3000
 
 [env]
@@ -43,4 +43,4 @@ args = "npm run dev"
 waitForPort = 5000
 
 [agent]
-integrations = ["javascript_anthropic:1.0.0", "javascript_gemini:1.0.0"]
+integrations = ["javascript_anthropic:1.0.0", "javascript_gemini:1.0.0", "javascript_database:1.0.0"]
