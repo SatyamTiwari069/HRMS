@@ -1,0 +1,80 @@
+You are a senior full-stack and AI engineer. Build a complete, production-ready, free-tier deployable, AI-powered Human Resource Management System (HRMS) fulfilling ALL features and compliance per the attached enterprise documentation. Your output must contain REAL, WORKING CODE—not stubs or descriptions—for backend (Node.js/Express), frontend (Next.js/TailwindCSS), database (Supabase), and AI/ML integrations (Gemini, Claude, etc), using my supplied credentials.
+
+## USE THESE CREDENTIALS IN EVERY .env, CODE, AND INTEGRATION
+- Supabase URL: https://teksvqzoekypmczuhzmy.supabase.co
+- Supabase anon/public key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRla3N2cXpvZWt5cG1jenVoem15Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyMjMyODUsImV4cCI6MjA3Njc5OTI4NX0.6e17_EdhsizbyZXaOB0ixoWadfUK0WhMk-PKaIrZnAo
+- Gemini API Key: AIzaSyDccTviqZPFhCclqRoGXIchD0fp8nTPgxE
+
+---
+
+## SYSTEM REQUIREMENTS (MANDATORY IMPLEMENTATION)
+- **Tech Stack:** 
+  - Frontend: Next.js 14, TailwindCSS, Shadcn/ui, Chart.js/face-api.js 
+  - Backend: Node.js, Express.js, REST APIs, JWT Auth (Supabase Auth)
+  - Database: Supabase Postgres, full schema, RLS, indexes, file buckets for resumes/documents/payslips
+  - AI/ML: Google Gemini API, Claude API (resume parsing/ranking), HuggingFace, TensorFlow.js
+  - Deployment: Vercel, GitHub Actions; full automated deploy/config scripts and manifests
+  - Monitoring: Logflare, Vercel/Google Analytics
+  
+- **Scalability:** Must support 10,000 employees with real-time ops and free-tier constraints.
+- **Security:** RLS policies, field encryption, password hashing, JWT session, rate limiting, audit logs, input validation.
+- **Accessibility:** WCAG-compliant, responsive, modern UX.
+
+---
+
+## CORE MODULES (PROVIDE WORKING SAMPLES FOR EACH)
+- **Authentication & Role Management:** JWT sessions, 4+ roles (Admin, Senior Manager, HR, Employee), RBAC with Supabase policies, registration/login flows (Next.js + Supabase Auth).
+- **Employee Profile Management:** Full CRUD with file uploads, document buckets, real-time search (API routes + React pages).
+- **Attendance System:** Clock-in/out, manual/biometric (face recognition via face-api.js), status flags, location, late detection, facial encoding storage and verification (Next.js + Supabase).
+- **Leave Management:** Request/approve/reject, multi-level approval, leave balance tracking, automated deduction, seed data.
+- **Payroll:** Automated salary computation (attendance, bonuses, overtime, deductions, taxes), payslip generation (jsPDF), PDF upload and retrieval, API sample and FE demo.
+- **Performance Reviews:** 360 feedback collection, AI-generated reviews and summaries (Gemini API with real prompts, actual scoring, storage), analytics dashboard with Chart.js/ECharts.
+- **Recruitment System:** Job CRUD, resume upload, Gemini+Claude parsing and JSON extraction, AI candidate ranking, interview scheduling, FE/BE code for full workflow.
+- **Dashboards:** Role-specific React dashboards for employees, HR, managers, admins (include sample chart components, notifications, analytics, and recent activity).
+- **Notifications & Activity Feed:** Real-time notifications for pending approvals, feedback, analytics, scheduling.
+
+---
+
+## ADVANCED AI/ML FEATURES (FULL IMPLEMENTATION SAMPLES)
+- **AI Resume Screener:** Parse PDF/DOCX, use Gemini/Claude for skills extraction & scoring, rank, store, display results.
+- **Voice Interviewer:** Browser audio capture, Gemini transcription/sentiment analysis, result logging and dashboard display.
+- **Chatbot (HR Assistant):** 24x7 conversational assistant with Gemini, persistent session, functions for leave/payslip/querying, role-based capabilities (use function-calling examples).
+- **Burnout Predictor & Career Advisor:** Analyze historical data to flag risk, suggest upskilling/training, show code for periodic analytic and retention strategy.
+- **Smart Scheduler:** Suggest optimal meeting/interview times across time zones.
+- **Document Analyzer:** Upload and auto-fill forms, OCR/AI extraction (Gemini integration).
+
+---
+
+## SECURITY & OPERATIONS
+- **RLS Policies:** Must show full Supabase SQL for enabling RLS, plus policies for all sensitive tables.
+- **Encryption:** Field-level encryption for salaries, resumes, face encoding (crypto code sample).
+- **Audit Logging:** API code to persist action history, including old/new data, user agent, IP tracking.
+- **Input Validation & Rate Limiting:** Zod schema + Upstash or native rate limiter; API endpoint and middleware examples.
+- **CI/CD:** Vercel deploy steps, GitHub Actions YML, Seed/Test scripts with my credentials, example README.
+
+---
+
+## DATABASE ARTIFACTS
+- Full schema: profiles, attendance, leaves, payroll, performancereviews, notifications, auditlogs, applications, jobpostings, resumes, documents, facedata.
+- Indexes for common queries; example pagination code.
+- Buckets for avatars, resumes, payslips, docs; Supabase bucket config/policy SQL.
+
+---
+
+## TESTING & DOCS
+- 3+ Jest sample files for API, FE, and AI features
+- OpenAPI yaml/markdown or tabular sample for all endpoints, showing auth headers and example requests/responses.
+- Example README.md explaining deployment (using your provided credentials).
+
+---
+
+## OUTPUT INSTRUCTIONS
+- Structure output as a multi-file repository with real code, sample .env, API/FE routes/components, sample data, deployment config, and AI integration hooks.
+- Do not return summaries or stubs—show executable code, real working logic, wiring all layers together.
+- Use code block formatting with clear file paths and context so it can be copy-pasted into a new repo and deployed.
+- Credentials must be prefilled everywhere—NO placeholders.
+
+## MANDATORY
+- **Every listed feature, security measure, and AI integration must be present and working (show actual code samples and integrations for each).**
+- **No code stubs or placeholders—return full, runnable code for API endpoints, React pages/components, AI service integration, Supabase schema, deployment manifests, CI/CD scripts, and testing files.**
+
